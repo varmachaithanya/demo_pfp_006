@@ -8,6 +8,8 @@ echo "enter ypur choice"
 echo "enter 1: for addition"
 echo "enter 2: for subtraction"
 echo "enter 3: for multiplication"
+echo "enter 4: for division"
+echo "enter 5: for modulus"
 read input
 case $input in
 	1)
@@ -21,6 +23,14 @@ case $input in
 	3)
 		mul=$(($a*$b))
 		echo mul is $mul
+		;;
+	4)
+		div=$(($a/$b))
+		echo div is $div
+		;;
+	5)
+		mod=$(($a%$b))
+		echo mod is $mod
 		;;
 	*)
 		echo Incorrect Information 
