@@ -11,26 +11,45 @@ echo "enter 3: for multiplication"
 echo "enter 4: for division"
 echo "enter 5: for modulus"
 read input
+
+addition () {
+
+	sum=$(($a+$b))
+	echo sum is $sum
+}
+
+subtraction () {
+	sub=$(($a-$b))
+	echo sub is $sub
+}
+multiplication () {
+	mul=$(($a*$b))
+	echo mul is $mul
+}
+division () {
+	div=$(($a/$b))
+	echo div is $div
+}
+modulus () {
+	mod=$(($a%$b))
+	echo mod is $mod
+}
+
 case $input in
 	1)
-		sum=$(($a+$b))
-		echo sum is $sum
+		addition 
 		;;
 	2)
-		sub=$(($a-$b))
-		echo sub is $sub
+		subtraction
 		;;
 	3)
-		mul=$(($a*$b))
-		echo mul is $mul
+		multiplication
 		;;
 	4)
-		div=$(($a/$b))
-		echo div is $div
+		division
 		;;
 	5)
-		mod=$(($a%$b))
-		echo mod is $mod
+		modulus
 		;;
 	*)
 		echo Incorrect Information 
